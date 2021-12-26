@@ -8,22 +8,22 @@
   # 
   # 
  */
+function print(text) {
+  process.stdout.write(text);
+}
+// Continue the code here
 function drawVLine(n) {
-  // Continue the code here
-  function drawVLine(n) {
-    for (let i = 0; i < n; i++) {
-      print("#");
-    }
+  for (let i = 0; i < n; i++) {
+    console.log("#");
   }
 }
+
+drawTree(3);
 /**
  *
  * In this function, you will have to draw a horizontal line with `n` length
  * for example `drawHLine(5) should print out # # # # # (there are spaces here!)
  */
-function print(text) {
-  process.stdout.write(text);
-}
 function drawHLine(n) {
   // Continue the code here
   for (let index = 0; index < n; index++) {
