@@ -10,14 +10,25 @@
  */
 function drawVLine(n) {
   // Continue the code here
+  function drawVLine(n) {
+    for (let i = 0; i < n; i++) {
+      print("#");
+    }
+  }
 }
 /**
  *
  * In this function, you will have to draw a horizontal line with `n` length
  * for example `drawHLine(5) should print out # # # # # (there are spaces here!)
  */
+function print(text) {
+  process.stdout.write(text);
+}
 function drawHLine(n) {
   // Continue the code here
+  for (let index = 0; index < n; index++) {
+    print("#");
+  }
 }
 
 /**
@@ -34,6 +45,12 @@ function drawHLine(n) {
  */
 function drawSquare(n) {
   // Continue the code here
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c < n; c++) {
+      print("# ");
+    }
+    console.log();
+  }
 }
 
 /**
@@ -50,7 +67,15 @@ function drawSquare(n) {
  */
 function drawLeftTriangle(n) {
   // Continue the code here
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c <= r; c++) {
+      print("# ");
+    }
+    console.log();
+  }
 }
+
+//drawLeftTriangle(4);
 
 /**
  * 
@@ -66,7 +91,24 @@ function drawLeftTriangle(n) {
  */
 function drawTree(n) {
   // Continue the code here
+  //row
+  for (let r = 0; r < n; r++) {
+    //Spaces
+    for (let s = n - 1; s >= r; s--) {
+      print(" ");
+    }
+    //column
+    for (let c = 0; c <= r; c++) {
+      print("# ");
+    }
+    console.log();
+  }
+  for (let i = 0; i < n; i++) {
+    print(" ");
+  }
+  console.log("#");
 }
+
 /**
  *
  * In this example, you will create 4 arrays, `yellowCards`, `greenCards`, `redCards`, `blueCards`
@@ -78,4 +120,13 @@ function fillUnoDeck() {
   let redCards = [];
   let blueCards = [];
   // Fill the cards here
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 2; j++) {
+      greenCards.push(i);
+      yellowCards.push(i);
+      redCards.push(i);
+      blueCards.push(i);
+    }
+  }
+  console.log(greenCards, yellowCards, redCards, blueCards);
 }
